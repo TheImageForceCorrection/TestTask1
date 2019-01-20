@@ -41,7 +41,7 @@ public:
 		return chatServer.isWorking();
 	}
 
-	//void ChatAutomaticClient::startAutomaticSending() starts automatic message sending
+	//	void ChatAutomaticClient::startAutomaticSending() starts automatic message sending
 	void startAutomaticSending()
 	{
 		startExecution();
