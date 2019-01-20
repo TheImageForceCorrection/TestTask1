@@ -17,7 +17,7 @@ public:
 
 	ChatAutomaticClients(unsigned int _nClients, const int *_timeGaps, const string *_messageTexts, ChatServer &_chatServer);
 
-	//void ChatAutomaticClient::startAutomaticSending() starts automatic message sending
+	//	void ChatAutomaticClient::startAutomaticSending() starts automatic message sending
 	void startAutomaticSending();
 
 	//	void ChatAutomaticClient::joinThread() joins threads
