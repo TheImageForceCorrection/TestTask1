@@ -20,8 +20,8 @@ private:
 
 	bool isChDigit(int ch) const { return (ch >= -1 && ch <= 255) ? isdigit(ch) : 0; }
 
-	//int  ChatUserInterface::parseClientTimeGap(char *_str, unsigned int _len)
-	//processes _str and returns client thread sleep time and leaves in _str sending message text 
+	//	int  ChatUserInterface::parseClientTimeGap(char *_str, unsigned int _len)
+	//	processes _str and returns client thread sleep time and leaves in _str sending message text 
 	int parseClientTimeGap(char *_str, unsigned int _len);
 
 	//	void ChatUserInterface::readFromUI() reads initializing information
@@ -64,7 +64,7 @@ public:
 		return clientTimeGaps;
 	}
 
-	//void ChatUserInterface::execution() const waiting for the user enters the terminating command
+	//	void ChatUserInterface::execution() const waiting for the user enters the terminating command
 	void execution() const;
 
 
