@@ -1,7 +1,6 @@
 #include "../include/ChatProgram.h"
 #include "../include/ChatException.h"
 
-
 int main()
 {
 	try
