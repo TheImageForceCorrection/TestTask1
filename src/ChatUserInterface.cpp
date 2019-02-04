@@ -29,19 +29,19 @@ int ChatUserInterface::parseClientTimeGap(char *_str, unsigned int _len)
 void ChatUserInterface::readFromUI()
 {
 	char buf[256];
-	cin.getline(buf, 256);
+	std::cin.getline(buf, 256);
 	chatFileName = buf;
 
-	cin.getline(buf, 256);
+	std::cin.getline(buf, 256);
 	if ((nClients = atoi(buf)) <= 0)
 		throw (ChatException("Invalid input data format", "void ChatUserInterface::readFromUI()"));
 
-	clientMessageTexts = new string[nClients];
+	clientMessageTexts = new std::string[nClients];
 	clientTimeGaps = new int[nClients];
 
 	for (unsigned int i = 0; i < nClients; i++)
 	{
-		cin.getline(buf, 256);
+		std::cin.getline(buf, 256);
 		clientTimeGaps[i] = parseClientTimeGap(buf, 256);
 		clientMessageTexts[i] = buf;
 	}
@@ -52,8 +52,8 @@ void ChatUserInterface::execution() const
 	char buf[256];
 	do
 	{
-		cout << "Enter q to exit\n";
-		cin.getline(buf, 256);
+		std::cout << "Enter q to exit\n";
+		std::cin.getline(buf, 256);
 
 		int j = 0;
 		for (; j < 256 && isChSpace(buf[j]); j++);
@@ -74,6 +74,6 @@ void ChatUserInterface::execution() const
 
 	}
 	
-	while (!(string(buf) == "q"));
+	while (!(std::string(buf) == "q"));
 
 }
