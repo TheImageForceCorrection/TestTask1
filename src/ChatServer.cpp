@@ -1,6 +1,6 @@
 #include "../include/ChatServer.h"
 
-void ChatServer::getMessage(const string  &_messageText, const string &_timeStr, int _nClient)
+void ChatServer::getMessage(const std::string &_messageText, const std::string &_timeStr, int _nClient)
 {
 	const ChatMessage *curMessage = new ChatMessage(_messageText, _timeStr, _nClient);
 	mu.lock();
