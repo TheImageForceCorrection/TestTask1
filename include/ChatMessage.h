@@ -2,15 +2,13 @@
 
 #include <string>
 
-using namespace std;
-
 //	class ChatMessage incapsulates message and information about it
 class ChatMessage {
 
 private:
 
-	const string text;
-	const string time;
+	const std::string text;
+	const std::string time;
 	int nClient;
 
 	ChatMessage() = delete;
@@ -19,7 +17,7 @@ private:
 
 public:
 
-	ChatMessage(const string &_text, const string &_time, int _nClient) :text(_text), time(_time), nClient(_nClient)
+	ChatMessage(const std::string &_text, const std::string &_time, int _nClient) :text(_text), time(_time), nClient(_nClient)
 	{
 
 	}
@@ -29,16 +27,16 @@ public:
 		return nClient;
 	}
 
-	const string &getTime() const
+	const std::string &getTime() const
 	{
 		return time;
 	}
 
-	const string &getText() const
+	const std::string &getText() const
 	{
 		return text;
 	}
 
 };
 
-ostream &operator<<(ostream &os, const ChatMessage &_message);
+std::ostream &operator<<(std::ostream &os, const ChatMessage &_message);
