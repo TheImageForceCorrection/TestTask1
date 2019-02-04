@@ -7,15 +7,13 @@
 #include "ChatTime.h"
 #include "ChatAutomaticClient.h"
 
-using namespace std;
-
 //	class ChatAutomaticClients manages the clients, that automatically send messages
-class ChatAutomaticClients :public vector<ChatAutomaticClient *>
+class ChatAutomaticClients :public std::vector<ChatAutomaticClient *>
 {
 
 public:
 
-	ChatAutomaticClients(unsigned int _nClients, const int *_timeGaps, const string *_messageTexts, ChatServer &_chatServer);
+	ChatAutomaticClients(unsigned int _nClients, const int *_timeGaps, const std::string *_messageTexts, ChatServer &_chatServer);
 
 	//	void ChatAutomaticClient::startAutomaticSending() starts automatic message sending
 	void startAutomaticSending();
