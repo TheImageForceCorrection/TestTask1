@@ -9,7 +9,7 @@ void ChatThreadObj::threadSleep()
 
 	wakeupTime = curTime;
 	wakeupTime.tm_sec += timeGap;
-	this_thread::sleep_until(chrono::system_clock::from_time_t(mktime(&wakeupTime)));
+	std::this_thread::sleep_until(std::chrono::system_clock::from_time_t(mktime(&wakeupTime)));
 }
 
 void ChatThreadObj::executionFunc()
