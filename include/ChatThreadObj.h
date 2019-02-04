@@ -2,8 +2,6 @@
 
 #include <thread>
 
-using namespace std;
-
 //	abstract class ChatThreadObj provides an interface for creating objects with its own thread
 class ChatThreadObj {
 
@@ -11,7 +9,7 @@ private:
 
 	int timeGap;
 	ChatThreadObj() = delete;
-	thread *chatThread;
+	std::thread *chatThread;
 
 	//	void ChatThreadObj::threadSleep() makes the thread sleep
 	void threadSleep();
@@ -31,7 +29,7 @@ public:
 	//	void ChatThreadObj::startExecution() creates a thread
 	void startExecution()
 	{
-		chatThread = new thread(&ChatThreadObj::executionFunc, this);
+		chatThread = new std::thread(&ChatThreadObj::executionFunc, this);
 	}
 
 	//	void ChatThreadObj::action() defines the thread behavior in the implementation class
