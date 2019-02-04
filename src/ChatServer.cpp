@@ -23,6 +23,6 @@ void ChatServer::writeMessages()
 
 void ChatServer::startChat()
 {
-	Working = true;
+	working = true;
 	startExecution();
 }
