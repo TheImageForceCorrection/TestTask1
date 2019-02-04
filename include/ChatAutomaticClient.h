@@ -5,15 +5,13 @@
 #include "ChatClient.h"
 #include "ChatTime.h"
 
-using namespace std;
-
 //	class ChatAutomaticClient defines the client, that automatically send messages
 class ChatAutomaticClient :public ChatClient, public ChatThreadObj {
 
 private:
 
 	ChatServer &chatServer;
-	string messageText;
+	std::string messageText;
 	int timeGap;
 	ChatTime curTime;
 
