@@ -7,8 +7,6 @@
 #include "ChatFile.h"
 #include "ChatThreadObj.h"
 
-using namespace std;
-
 //	class ChatServer manages message receiving 
 class ChatServer :public ChatThreadObj {
 
@@ -17,8 +15,8 @@ private:
 	ChatFile file;
 
 	bool working;
-	mutex mu;
-	queue<const ChatMessage *> messages;
+	std::mutex mu;
+	std::queue<const ChatMessage *> messages;
 
 
 	ChatServer() = delete;
@@ -27,7 +25,7 @@ private:
 
 public:
 
-	ChatServer(const string &_chatFileName, int _nClients) : file(_chatFileName), ChatThreadObj(1)
+	ChatServer(const std::string &_chatFileName, int _nClients) : file(_chatFileName), ChatThreadObj(1)
 	{
 
 	}
@@ -45,7 +43,7 @@ public:
 	}
 
 	//	void ChatServer::getMessage(const string  &_messageText, const string &_timeStr, int _nClient) receives messages
-	void getMessage(const string  &_messageText, const string &_timeStr, int _nClient);
+	void getMessage(const std::string &_messageText, const std::string &_timeStr, int _nClient);
 
 	//	void ChatServer::writeMessages() refers to the chat file's write interface
 	void writeMessages();
