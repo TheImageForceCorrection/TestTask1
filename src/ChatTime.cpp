@@ -6,7 +6,7 @@ void ChatTime::refreshChatTime()
 	localtime_s(&curTime, &rawtime);
 }
 
-const string &ChatTime::getTimeStr()
+const std::string &ChatTime::getTimeStr()
 {
 	char buf[10] = "\0";
 	refreshChatTime();
