@@ -604,20 +604,15 @@ public:
 int main()
 {
 	try
-	
 	{
 		ChatProgram chatProgram;
 		chatProgram.execute();
 	}
-
 	catch (const ChatException &e)
-
 	{
 		cout << e;
 	}
-
 	catch (...)
-
 	{
 		cout << "System error\n";
 	}
