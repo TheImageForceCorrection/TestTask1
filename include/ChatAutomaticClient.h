@@ -21,7 +21,7 @@ private:
 
 public:
 
-	ChatAutomaticClient(int _clientN, int _timeGap, const string &_messageText, ChatServer &_chatServer) :ChatClient(_clientN),
+	ChatAutomaticClient(int _clientN, int _timeGap, const std::string &_messageText, ChatServer &_chatServer) :ChatClient(_clientN),
 		timeGap(_timeGap), messageText(_messageText), chatServer(_chatServer), ChatThreadObj(_timeGap)
 	{
 
