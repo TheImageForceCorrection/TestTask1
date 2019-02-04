@@ -10,11 +10,11 @@ int main()
 	}
 	catch (const ChatException &e)
 	{
-		cout << e;
+		std::cout << e;
 	}
 	catch (...)
 	{
-		cout << "System error\n";
+		std::cout << "System error\n";
 	}
 
 	return 0;
