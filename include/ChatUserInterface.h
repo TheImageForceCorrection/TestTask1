@@ -4,16 +4,14 @@
 #include <iostream>
 #include "ChatException.h"
 
-using namespace std;
-
 //	class ChatUserInterface manages chat initializing information input
 class ChatUserInterface {
 
 private:
 
-	string chatFileName;
+	std::string chatFileName;
 	unsigned int nClients;
-	string *clientMessageTexts;
+	std::string *clientMessageTexts;
 	int *clientTimeGaps;
 
 	bool isChSpace(int ch) const { return (ch >= -1 && ch <= 255) ? isspace(ch) : 0; }
@@ -34,7 +32,7 @@ public:
 		readFromUI();
 	}
 
-	const string &getChatFileName() const
+	const std::string &getChatFileName() const
 	{
 		return chatFileName;
 	}
@@ -44,7 +42,7 @@ public:
 		return nClients;
 	}
 
-	const string &getClientMessageText(int _clientN) const
+	const std::string &getClientMessageText(int _clientN) const
 	{
 		return clientMessageTexts[_clientN];
 	}
@@ -54,7 +52,7 @@ public:
 		return clientTimeGaps[_clientN];
 	}
 
-	const string *getClientMessageTexts() const
+	const std::string *getClientMessageTexts() const
 	{
 		return clientMessageTexts;
 	}
