@@ -248,7 +248,7 @@ private:
 
 	ChatFile file;
 
-	bool Working;
+	bool working;
 	mutex mu;
 	queue<const ChatMessage *> messages;
 
@@ -273,7 +273,7 @@ public:
 	//	bool ChatServer::isWorking() implements the thread stopping conditions
 	bool isWorking() const
 	{
-		return Working;
+		return working;
 	}
 
 	//	void ChatServer::getMessage(const string  &_messageText, const string &_timeStr, int _nClient) receives messages
@@ -302,14 +302,14 @@ public:
 	//	void ChatServer::startChat() starts chat execution
 	void startChat()
 	{
-		Working = true;
+		working = true;
 		startExecution();
 	}
 
 	//	void ChatServer::stopChat() stops all threads
 	void stopChat()
 	{
-		Working = false;
+		working = false;
 	}
 
 };
