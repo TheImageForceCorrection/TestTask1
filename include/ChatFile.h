@@ -5,14 +5,12 @@
 #include "ChatException.h"
 #include "ChatMessage.h"
 
-using namespace std;
-
 //	class ChatFile provides an interface for writing to a chat file 
 class ChatFile {
 
 private:
 
-	const string filename;
+	const std::string filename;
 
 	ChatFile() = delete;
 
@@ -21,7 +19,7 @@ private:
 public:
 
 	//	ChatFile::ChatFile(const string &_filename) initializes chat file _filename 
-	ChatFile(const string &_filename);
+	ChatFile(const std::string &_filename);
 
 	//	ChatFile::Write(const ChatMessage &_message) writes _message in the chat file
 	void Write(const ChatMessage &_message);
