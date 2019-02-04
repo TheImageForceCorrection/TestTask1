@@ -3,8 +3,6 @@
 #include <string>
 #include <ctime>
 
-using namespace std;
-
 //	class ChatTime provides an interface to the system time 
 class ChatTime {
 
@@ -12,7 +10,7 @@ private:
 
 	time_t rawtime;
 	tm curTime;
-	string timeStr;
+	std::string timeStr;
 
 	//	void ChatTime::refreshChatTime() loads the current time into the program
 	void refreshChatTime();
@@ -20,7 +18,7 @@ private:
 public:
 
 	//	const string &ChatTime::getTimeStr() returns a string with the current time
-	const string &getTimeStr();
+	const std::string &getTimeStr();
 
 	//	int ChatTime::getSeconds() returns the current seconds
 	int getSeconds();
